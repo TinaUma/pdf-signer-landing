@@ -19,270 +19,250 @@
       padding: 40px 24px;
     }
 
-    .badge {
-      font-size: 11px;
+    /* ── lang switcher ── */
+    .lang-bar {
+      position: fixed;
+      top: 20px;
+      right: 24px;
+      display: flex;
+      gap: 4px;
+      z-index: 100;
+    }
+
+    .lang-btn {
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid #2a2a3d;
+      background: transparent;
+      color: #8888aa;
+      font-size: .82rem;
       font-weight: 600;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: #6c63ff;
-      margin-bottom: 20px;
+      cursor: pointer;
+      transition: all .15s;
+      letter-spacing: .04em;
     }
 
-    h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 700;
-      line-height: 1.15;
-      text-align: center;
-      margin-bottom: 16px;
-    }
+    .lang-btn:hover { border-color: #6c63ff; color: #e8e8f0; }
+    .lang-btn.active { background: #6c63ff; color: #fff; border-color: #6c63ff; }
 
+    /* ── content ── */
+    .badge { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #6c63ff; margin-bottom: 20px; }
+
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.15; text-align: center; margin-bottom: 16px; }
     h1 span { color: #6c63ff; }
 
-    .subtitle {
-      font-size: 1.05rem;
-      color: #8888aa;
-      text-align: center;
-      max-width: 540px;
-      line-height: 1.6;
-      margin-bottom: 56px;
-    }
+    .subtitle { font-size: 1.05rem; color: #8888aa; text-align: center; max-width: 540px; line-height: 1.6; margin-bottom: 56px; }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      width: 100%;
-      max-width: 760px;
-      margin-bottom: 56px;
-    }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; width: 100%; max-width: 760px; margin-bottom: 56px; }
 
-    .card {
-      background: #13131f;
-      border: 1px solid #2a2a3d;
-      border-radius: 16px;
-      padding: 32px 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      transition: border-color .2s, transform .2s;
-    }
+    .card { background: #13131f; border: 1px solid #2a2a3d; border-radius: 16px; padding: 32px 28px; display: flex; flex-direction: column; gap: 16px; transition: border-color .2s, transform .2s; }
+    .card:hover { border-color: #6c63ff; transform: translateY(-3px); }
 
-    .card:hover {
-      border-color: #6c63ff;
-      transform: translateY(-3px);
-    }
+    .card-label { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #6c63ff; }
+    .card h2 { font-size: 1.3rem; font-weight: 600; }
+    .card p { font-size: .9rem; color: #8888aa; line-height: 1.6; flex: 1; }
 
-    .card-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: #6c63ff;
-    }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { font-size: 11px; font-weight: 500; padding: 4px 10px; border-radius: 20px; background: #1e1e30; color: #aaaacc; border: 1px solid #2a2a3d; }
 
-    .card h2 {
-      font-size: 1.3rem;
-      font-weight: 600;
-    }
-
-    .card p {
-      font-size: .9rem;
-      color: #8888aa;
-      line-height: 1.6;
-      flex: 1;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .tag {
-      font-size: 11px;
-      font-weight: 500;
-      padding: 4px 10px;
-      border-radius: 20px;
-      background: #1e1e30;
-      color: #aaaacc;
-      border: 1px solid #2a2a3d;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 22px;
-      border-radius: 10px;
-      font-size: .9rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: opacity .2s, transform .15s;
-      margin-top: 4px;
-    }
-
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; border-radius: 10px; font-size: .9rem; font-weight: 600; text-decoration: none; transition: opacity .2s, transform .15s; margin-top: 4px; }
     .btn:hover { opacity: .85; transform: scale(1.02); }
-
     .btn-primary { background: #6c63ff; color: #fff; }
-    .btn-outline {
-      background: transparent;
-      color: #e8e8f0;
-      border: 1px solid #2a2a3d;
-    }
+    .btn-outline { background: transparent; color: #e8e8f0; border: 1px solid #2a2a3d; }
     .btn-outline:hover { border-color: #6c63ff; }
 
-    .comparison {
-      width: 100%;
-      max-width: 760px;
-      background: #13131f;
-      border: 1px solid #2a2a3d;
-      border-radius: 16px;
-      padding: 32px 28px;
-      margin-bottom: 48px;
-    }
+    .comparison { width: 100%; max-width: 760px; background: #13131f; border: 1px solid #2a2a3d; border-radius: 16px; padding: 32px 28px; margin-bottom: 48px; }
+    .comparison h3 { font-size: 1rem; font-weight: 600; margin-bottom: 20px; color: #e8e8f0; }
 
-    .comparison h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: #e8e8f0;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: .88rem;
-    }
-
-    th {
-      text-align: left;
-      padding: 8px 12px;
-      color: #6c63ff;
-      font-weight: 600;
-      font-size: .78rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      border-bottom: 1px solid #2a2a3d;
-    }
-
-    td {
-      padding: 10px 12px;
-      color: #aaaacc;
-      border-bottom: 1px solid #1a1a28;
-      vertical-align: top;
-    }
-
+    table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+    th { text-align: left; padding: 8px 12px; color: #6c63ff; font-weight: 600; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; border-bottom: 1px solid #2a2a3d; }
+    td { padding: 10px 12px; color: #aaaacc; border-bottom: 1px solid #1a1a28; vertical-align: top; }
     td:first-child { color: #e8e8f0; font-weight: 500; }
-
     tr:last-child td { border-bottom: none; }
 
-    .footer {
-      font-size: .82rem;
-      color: #555570;
-      text-align: center;
-    }
-
-    .footer a {
-      color: #6c63ff;
-      text-decoration: none;
-    }
-
+    .footer { font-size: .82rem; color: #555570; text-align: center; }
+    .footer a { color: #6c63ff; text-decoration: none; }
     .footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
 
-  <p class="badge">Case Study · PDFsigner Landing Page</p>
+  <div class="lang-bar">
+    <button class="lang-btn active" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('ru')">RU</button>
+  </div>
 
-  <h1>One product,<br><span>two approaches.</span></h1>
-
-  <p class="subtitle">
-    I built a landing page for <strong>PDFsigner</strong> twice — once by hand with HTML/CSS,
-    and once using Claude Design. Here's what each approach looks like.
-  </p>
+  <p class="badge" data-i18n="badge"></p>
+  <h1 data-i18n="h1"></h1>
+  <p class="subtitle" data-i18n="subtitle"></p>
 
   <div class="cards">
-
     <div class="card">
-      <p class="card-label">Approach A</p>
-      <h2>Hand-coded HTML/CSS</h2>
-      <p>
-        Written from scratch: semantic markup, custom CSS, no frameworks.
-        Full control over every pixel, structure, and animation.
-      </p>
+      <p class="card-label" data-i18n="a_label"></p>
+      <h2 data-i18n="a_title"></h2>
+      <p data-i18n="a_desc"></p>
       <div class="tags">
         <span class="tag">HTML</span>
         <span class="tag">CSS</span>
         <span class="tag">Vanilla JS</span>
-        <span class="tag">Full control</span>
+        <span class="tag" data-i18n="a_tag"></span>
       </div>
-      <a href="claude-html/" class="btn btn-outline">View HTML version →</a>
+      <a href="claude-html/" class="btn btn-outline" data-i18n="a_btn"></a>
     </div>
 
     <div class="card">
-      <p class="card-label">Approach B</p>
-      <h2>Claude Design</h2>
-      <p>
-        Generated with Claude's visual design tool. Rapid iteration,
-        AI-assisted layout and styling, then exported as a standalone bundle.
-      </p>
+      <p class="card-label" data-i18n="b_label"></p>
+      <h2 data-i18n="b_title"></h2>
+      <p data-i18n="b_desc"></p>
       <div class="tags">
         <span class="tag">Claude Design</span>
-        <span class="tag">AI-assisted</span>
-        <span class="tag">Standalone bundle</span>
+        <span class="tag" data-i18n="b_tag1"></span>
+        <span class="tag" data-i18n="b_tag2"></span>
       </div>
-      <a href="claude-design/" class="btn btn-primary">View Design version →</a>
+      <a href="claude-design/" class="btn btn-primary" data-i18n="b_btn"></a>
     </div>
-
   </div>
 
   <div class="comparison">
-    <h3>Comparison at a glance</h3>
+    <h3 data-i18n="cmp_title"></h3>
     <table>
       <thead>
         <tr>
-          <th>Aspect</th>
-          <th>Hand-coded</th>
-          <th>Claude Design</th>
+          <th data-i18n="col_aspect"></th>
+          <th data-i18n="col_html"></th>
+          <th data-i18n="col_design"></th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Speed</td>
-          <td>Slower — every detail written manually</td>
-          <td>Fast — layout generated in minutes</td>
+          <td data-i18n="row1_aspect"></td>
+          <td data-i18n="row1_html"></td>
+          <td data-i18n="row1_design"></td>
         </tr>
         <tr>
-          <td>Control</td>
-          <td>Total — every line is mine</td>
-          <td>Partial — export is a black box</td>
+          <td data-i18n="row2_aspect"></td>
+          <td data-i18n="row2_html"></td>
+          <td data-i18n="row2_design"></td>
         </tr>
         <tr>
-          <td>Style quality</td>
-          <td>Good with effort</td>
-          <td>Polished out of the box</td>
+          <td data-i18n="row3_aspect"></td>
+          <td data-i18n="row3_html"></td>
+          <td data-i18n="row3_design"></td>
         </tr>
         <tr>
-          <td>Maintainability</td>
-          <td>Easy to edit and extend</td>
-          <td>Harder — standalone bundle</td>
+          <td data-i18n="row4_aspect"></td>
+          <td data-i18n="row4_html"></td>
+          <td data-i18n="row4_design"></td>
         </tr>
         <tr>
-          <td>Best for</td>
-          <td>Production projects, portfolio code</td>
-          <td>Rapid prototypes, client demos</td>
+          <td data-i18n="row5_aspect"></td>
+          <td data-i18n="row5_html"></td>
+          <td data-i18n="row5_design"></td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <p class="footer">
-    PDFsigner — sign PDFs locally, no cloud &nbsp;·&nbsp;
-    <a href="https://github.com/TinaUma/PDF_Signer" target="_blank">GitHub repo</a>
+    <span data-i18n="footer_text"></span>&nbsp;·&nbsp;
+    <a href="https://github.com/TinaUma/PDF_Signer" target="_blank">GitHub</a>
     &nbsp;·&nbsp;
-    <a href="https://github.com/TinaUma/pdf-signer-landing" target="_blank">Landing source</a>
+    <a href="https://github.com/TinaUma/pdf-signer-landing" target="_blank" data-i18n="footer_source"></a>
   </p>
 
+  <script>
+    const i18n = {
+      en: {
+        badge:        "Case Study · PDFsigner Landing Page",
+        h1:           "One product,<br><span>two approaches.</span>",
+        subtitle:     "I built a landing page for <strong>PDFsigner</strong> twice — once by hand with HTML/CSS, and once using Claude Design. Here's what each approach looks like.",
+        a_label:      "Approach A",
+        a_title:      "Hand-coded HTML/CSS",
+        a_desc:       "Written from scratch: semantic markup, custom CSS, no frameworks. Full control over every pixel, structure, and animation.",
+        a_tag:        "Full control",
+        a_btn:        "View HTML version →",
+        b_label:      "Approach B",
+        b_title:      "Claude Design",
+        b_desc:       "Built visually using Claude's design tool. Rapid iteration, AI-assisted layout and styling, exported as a standalone bundle.",
+        b_tag1:       "AI-assisted",
+        b_tag2:       "Standalone bundle",
+        b_btn:        "View Design version →",
+        cmp_title:    "Comparison at a glance",
+        col_aspect:   "Aspect",
+        col_html:     "Hand-coded",
+        col_design:   "Claude Design",
+        row1_aspect:  "Speed",
+        row1_html:    "Slower — every detail written manually",
+        row1_design:  "Fast — layout generated in minutes",
+        row2_aspect:  "Control",
+        row2_html:    "Total — every line is mine",
+        row2_design:  "Partial — export is a black box",
+        row3_aspect:  "Style quality",
+        row3_html:    "Good with effort",
+        row3_design:  "Polished out of the box",
+        row4_aspect:  "Maintainability",
+        row4_html:    "Easy to edit and extend",
+        row4_design:  "Harder — standalone bundle",
+        row5_aspect:  "Best for",
+        row5_html:    "Production projects, portfolio code",
+        row5_design:  "Rapid prototypes, client demos",
+        footer_text:  "PDFsigner — sign PDFs locally, no cloud",
+        footer_source: "Landing source",
+      },
+      ru: {
+        badge:        "Кейс · Лендинг для PDFsigner",
+        h1:           "Один продукт,<br><span>два подхода.</span>",
+        subtitle:     "Я сделала лендинг для <strong>PDFsigner</strong> дважды — вручную на HTML/CSS и с помощью Claude Design. Вот как выглядит каждый вариант.",
+        a_label:      "Подход A",
+        a_title:      "Ручной HTML/CSS",
+        a_desc:       "Написан с нуля: семантическая разметка, кастомный CSS, без фреймворков. Полный контроль над структурой, стилями и анимациями.",
+        a_tag:        "Полный контроль",
+        a_btn:        "Смотреть HTML-версию →",
+        b_label:      "Подход B",
+        b_title:      "Claude Design",
+        b_desc:       "Собран визуально в инструменте Claude Design. Быстрая итерация, AI-помощь с макетом и стилями, экспорт в самодостаточный HTML-бандл.",
+        b_tag1:       "AI-генерация",
+        b_tag2:       "Standalone-бандл",
+        b_btn:        "Смотреть Design-версию →",
+        cmp_title:    "Сравнение подходов",
+        col_aspect:   "Критерий",
+        col_html:     "Ручной код",
+        col_design:   "Claude Design",
+        row1_aspect:  "Скорость",
+        row1_html:    "Медленнее — каждая деталь вручную",
+        row1_design:  "Быстро — макет за минуты",
+        row2_aspect:  "Контроль",
+        row2_html:    "Полный — каждая строка моя",
+        row2_design:  "Частичный — экспорт непрозрачен",
+        row3_aspect:  "Качество стиля",
+        row3_html:    "Хорошее, но требует усилий",
+        row3_design:  "Полированное из коробки",
+        row4_aspect:  "Поддержка",
+        row4_html:    "Легко редактировать и расширять",
+        row4_design:  "Сложнее — бандл как чёрный ящик",
+        row5_aspect:  "Лучше всего для",
+        row5_html:    "Продакшн, портфолио",
+        row5_design:  "Прототипы, демо для клиентов",
+        footer_text:  "PDFsigner — подпись PDF локально, без облака",
+        footer_source: "Исходники лендинга",
+      }
+    };
+
+    function setLang(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (i18n[lang][key] !== undefined) el.innerHTML = i18n[lang][key];
+      });
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase() === lang);
+      });
+      document.documentElement.lang = lang;
+      localStorage.setItem('lang', lang);
+    }
+
+    // restore saved language
+    const saved = localStorage.getItem('lang') || (navigator.language.startsWith('ru') ? 'ru' : 'en');
+    setLang(saved);
+  </script>
 </body>
 </html>
