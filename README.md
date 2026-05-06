@@ -1,3 +1,5 @@
+**English** | [Русский](README.ru.md)
+
 # PDFsigner — Landing Page
 
 Landing page for [PDFsigner](https://github.com/TinaUma/PDF_Signer), a local-first PDF signing tool.  
