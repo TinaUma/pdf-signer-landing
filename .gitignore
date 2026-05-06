@@ -1,3 +1,6 @@
 .tausik/
 .tausik-lib/
 .claude/
+AGENTS.md
+CLAUDE.md
+.mcp.json
