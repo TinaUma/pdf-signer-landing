@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PDFsigner Landing — Two Approaches</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0a0a0f;
+      color: #e8e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+
+    .badge {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #6c63ff;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    h1 span { color: #6c63ff; }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: #8888aa;
+      text-align: center;
+      max-width: 540px;
+      line-height: 1.6;
+      margin-bottom: 56px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      width: 100%;
+      max-width: 760px;
+      margin-bottom: 56px;
+    }
+
+    .card {
+      background: #13131f;
+      border: 1px solid #2a2a3d;
+      border-radius: 16px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: border-color .2s, transform .2s;
+    }
+
+    .card:hover {
+      border-color: #6c63ff;
+      transform: translateY(-3px);
+    }
+
+    .card-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #6c63ff;
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .card p {
+      font-size: .9rem;
+      color: #8888aa;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: #1e1e30;
+      color: #aaaacc;
+      border: 1px solid #2a2a3d;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-size: .9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity .2s, transform .15s;
+      margin-top: 4px;
+    }
+
+    .btn:hover { opacity: .85; transform: scale(1.02); }
+
+    .btn-primary { background: #6c63ff; color: #fff; }
+    .btn-outline {
+      background: transparent;
+      color: #e8e8f0;
+      border: 1px solid #2a2a3d;
+    }
+    .btn-outline:hover { border-color: #6c63ff; }
+
+    .comparison {
+      width: 100%;
+      max-width: 760px;
+      background: #13131f;
+      border: 1px solid #2a2a3d;
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 48px;
+    }
+
+    .comparison h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #e8e8f0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+
+    th {
+      text-align: left;
+      padding: 8px 12px;
+      color: #6c63ff;
+      font-weight: 600;
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      border-bottom: 1px solid #2a2a3d;
+    }
+
+    td {
+      padding: 10px 12px;
+      color: #aaaacc;
+      border-bottom: 1px solid #1a1a28;
+      vertical-align: top;
+    }
+
+    td:first-child { color: #e8e8f0; font-weight: 500; }
+
+    tr:last-child td { border-bottom: none; }
+
+    .footer {
+      font-size: .82rem;
+      color: #555570;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #6c63ff;
+      text-decoration: none;
+    }
+
+    .footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <p class="badge">Case Study · PDFsigner Landing Page</p>
+
+  <h1>One product,<br><span>two approaches.</span></h1>
+
+  <p class="subtitle">
+    I built a landing page for <strong>PDFsigner</strong> twice — once by hand with HTML/CSS,
+    and once using Claude Design. Here's what each approach looks like.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <p class="card-label">Approach A</p>
+      <h2>Hand-coded HTML/CSS</h2>
+      <p>
+        Written from scratch: semantic markup, custom CSS, no frameworks.
+        Full control over every pixel, structure, and animation.
+      </p>
+      <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">Vanilla JS</span>
+        <span class="tag">Full control</span>
+      </div>
+      <a href="claude-html/" class="btn btn-outline">View HTML version →</a>
+    </div>
+
+    <div class="card">
+      <p class="card-label">Approach B</p>
+      <h2>Claude Design</h2>
+      <p>
+        Generated with Claude's visual design tool. Rapid iteration,
+        AI-assisted layout and styling, then exported as a standalone bundle.
+      </p>
+      <div class="tags">
+        <span class="tag">Claude Design</span>
+        <span class="tag">AI-assisted</span>
+        <span class="tag">Standalone bundle</span>
+      </div>
+      <a href="claude-design/" class="btn btn-primary">View Design version →</a>
+    </div>
+
+  </div>
+
+  <div class="comparison">
+    <h3>Comparison at a glance</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Aspect</th>
+          <th>Hand-coded</th>
+          <th>Claude Design</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Speed</td>
+          <td>Slower — every detail written manually</td>
+          <td>Fast — layout generated in minutes</td>
+        </tr>
+        <tr>
+          <td>Control</td>
+          <td>Total — every line is mine</td>
+          <td>Partial — export is a black box</td>
+        </tr>
+        <tr>
+          <td>Style quality</td>
+          <td>Good with effort</td>
+          <td>Polished out of the box</td>
+        </tr>
+        <tr>
+          <td>Maintainability</td>
+          <td>Easy to edit and extend</td>
+          <td>Harder — standalone bundle</td>
+        </tr>
+        <tr>
+          <td>Best for</td>
+          <td>Production projects, portfolio code</td>
+          <td>Rapid prototypes, client demos</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="footer">
+    PDFsigner — sign PDFs locally, no cloud &nbsp;·&nbsp;
+    <a href="https://github.com/TinaUma/PDF_Signer" target="_blank">GitHub repo</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/TinaUma/pdf-signer-landing" target="_blank">Landing source</a>
+  </p>
+
+</body>
+</html>
