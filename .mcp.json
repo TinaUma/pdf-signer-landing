@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "codebase-rag": {
+      "command": "C:/WORK/pdf-signer-landing/.tausik/venv/Scripts/python.exe",
+      "args": [
+        "C:/WORK/pdf-signer-landing/.claude/mcp/codebase-rag/server.py",
+        "--project",
+        "C:/WORK/pdf-signer-landing"
+      ]
+    },
+    "tausik-project": {
+      "command": "C:/WORK/pdf-signer-landing/.tausik/venv/Scripts/python.exe",
+      "args": [
+        "C:/WORK/pdf-signer-landing/.claude/mcp/project/server.py",
+        "--project",
+        "C:/WORK/pdf-signer-landing"
+      ]
+    },
+    "tausik-brain": {
+      "command": "C:/WORK/pdf-signer-landing/.tausik/venv/Scripts/python.exe",
+      "args": [
+        "C:/WORK/pdf-signer-landing/.claude/mcp/brain/server.py",
+        "--project",
+        "C:/WORK/pdf-signer-landing"
+      ]
+    }
+  }
+}
