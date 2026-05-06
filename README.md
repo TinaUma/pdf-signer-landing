@@ -27,12 +27,21 @@ Written from scratch without frameworks:
 - Vanilla JS for interactive elements
 - Full control over structure, naming, and performance
 
+![HTML version — screen 1](assets/1preview-html.png)
+![HTML version — screen 2](assets/2preview-html.png)
+![HTML version — screen 3](assets/3preview-html.png)
+
 ### Approach B — Claude Design [`/claude-design`](claude-design/)
 
 Built visually using [Claude Design](https://claude.ai/design):
 - AI-assisted layout and visual style
 - Rapid iteration through a design tool interface
 - Exported as a self-contained standalone HTML bundle
+
+![Design version — screen 1](assets/1preview-design.png)
+![Design version — screen 2](assets/2preview-design.png)
+![Design version — screen 3](assets/3preview-design.png)
+![Design version — screen 4](assets/4preview-design.png)
 
 ---
 

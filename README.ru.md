@@ -27,12 +27,21 @@
 - Vanilla JS для интерактивных элементов
 - Полный контроль над структурой, именованием и производительностью
 
+![HTML-версия — экран 1](assets/1preview-html.png)
+![HTML-версия — экран 2](assets/2preview-html.png)
+![HTML-версия — экран 3](assets/3preview-html.png)
+
 ### Подход B — Claude Design [`/claude-design`](claude-design/)
 
 Собран визуально в [Claude Design](https://claude.ai/design):
 - AI-помощь с макетом и стилями
 - Быстрые итерации через интерфейс дизайн-инструмента
 - Экспорт в самодостаточный standalone HTML-бандл
+
+![Design-версия — экран 1](assets/1preview-design.png)
+![Design-версия — экран 2](assets/2preview-design.png)
+![Design-версия — экран 3](assets/3preview-design.png)
+![Design-версия — экран 4](assets/4preview-design.png)
 
 ---
 
